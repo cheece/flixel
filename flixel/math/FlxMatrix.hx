@@ -10,6 +10,12 @@ import flash.geom.Matrix;
 class FlxMatrix extends Matrix
 {
 	/**
+	 * @return	a copy of this matrix
+	 */
+	public inline function clone():FlxMatrix{
+		return new FlxMatrix(a,b,c,d,tx,ty);
+	} 
+	/**
 	 * Rotates this matrix, but takes the values of sine and cosine,
 	 * so it might be useful when you rotate multiple matrices by the same angle
 	 * @param	cos	The cosine value for rotation angle
